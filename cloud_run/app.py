@@ -38,11 +38,11 @@ def send_message(event, msg):
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
-    send_message(event, "メッセージありがとうございます\n明日のアイちゃんの動画もお楽しみに！")
+    send_message(event, "メッセージありがとうございます\n次のアイちゃんの動画もお楽しみに！")
 
 @handler.add(MessageEvent, message=StickerMessage)
 def handle_sticker_message(event):
-    send_message(event, "スタンプありがとうございます\n明日のアイちゃんの動画もお楽しみに！")
+    send_message(event, "スタンプありがとうございます\n次のアイちゃんの動画もお楽しみに！")
 
 if __name__ == "__main__":
     app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
