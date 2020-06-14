@@ -1,6 +1,6 @@
 import sys
-from package.morning_ai_bot_common import *
-from package.morning_ai_bot_config import *
+from morning_ai_bot_package.morning_ai_bot_common import *
+from morning_ai_bot_package.morning_ai_bot_config import *
 
 dag = DAG(
     'morning_ai_bot_daily_v0.0',
