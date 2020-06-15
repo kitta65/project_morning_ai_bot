@@ -1,10 +1,10 @@
 # 【非公式】モーニングアイちゃんBOT
 ## 概要
-キズナアイちゃん（`@aichan_nel`）の毎朝の投稿（`#モーニングアイちゃん`のやつ）を検索して、URLを共有するだけの非公式なLINEアカウントです。
+キズナアイちゃん（`@aichan_nel`）の毎朝の投稿（`#モーニングアイちゃん`）を検索して、URLを共有するだけの非公式LINEアカウントです。
 
 <img src="https://user-images.githubusercontent.com/26474260/84676442-7acdf900-af68-11ea-901c-3eb6ebc6a835.jpg" width="500px">
 
-## 準備
+## 導入
 このLINEアカウントを友達登録するだけです。以下のQRコードかID検索（`@141unaaf`）でどうぞ
 
 <img src="https://user-images.githubusercontent.com/26474260/84675173-d7c8af80-af66-11ea-95ab-cc480cf22ced.png" width="200px">
