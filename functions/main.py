@@ -45,7 +45,7 @@ def search_tweets(sess, env_label, query, from_jst=None, to_jst=None):
         # results is automatically sorted in reverse chronological order
         tweet_url = f"https://twitter.com/aichan_nel/status/{tweet_id}"
     except (IndexError, KeyError) as e:
-        raise MyException("couldn't find any tweets")
+        raise MyException("couldn't find any tweets\n{}".format(res.text))
     return tweet_url
 
 def send_message(message):
@@ -63,3 +63,8 @@ def morning_ai_bot(request):
     )
     send_message(tweet_url)
 
+#res = search_tweets(
+#    make_sess(), "myenv", "#モーニングアイちゃん from:aichan_nel has:videos",
+#    "202006200000",
+#    "202006200900"
+#)
