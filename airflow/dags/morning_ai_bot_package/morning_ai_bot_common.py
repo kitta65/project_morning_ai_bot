@@ -35,6 +35,6 @@ common_args = {
     'owner': os.environ.get("USER", "unknown"),
     'depends_on_past': False,
     'start_date': days_ago(1),
-    'retries': 8,
-    'retry_delay': timedelta(minutes=15),
+    'retries': 5,
+    'retry_delay': timedelta(minutes=60),
 }
