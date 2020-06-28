@@ -3,7 +3,7 @@ from morning_ai_bot_package.morning_ai_bot_common import *
 from morning_ai_bot_package.morning_ai_bot_config import *
 
 dag = DAG(
-    'morning_ai_bot_daily_v1.6',
+    'morning_ai_bot_daily_v0.0',
     default_args=common_args,
     description='call funtion mornin_ai_bot',
     schedule_interval="05 22 *  *  *",
