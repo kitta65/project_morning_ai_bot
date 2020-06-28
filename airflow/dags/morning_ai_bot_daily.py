@@ -2,6 +2,7 @@ import sys
 from morning_ai_bot_package.morning_ai_bot_common import *
 from morning_ai_bot_package.morning_ai_bot_config import *
 
+
 dag = DAG(
     'morning_ai_bot_daily_v0.0',
     default_args=common_args,
@@ -19,5 +20,9 @@ task1 = PythonOperator(
     },
     dag=dag,
 )
-
-task1 # >> task2
+task2 = BashOperator(
+    task_id="finish_time",
+    bash_command="date",
+    dag=dag
+)
+task1 >> task2
