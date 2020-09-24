@@ -33,7 +33,7 @@ def search_oldest_tweet(token, name, from_jst=None):
             year=from_tmp.year,
             month=from_tmp.month,
             day=from_tmp.day,
-            hour=6,
+            hour=5,
             minute=55
         ))
     res = requests.get(url, headers=headers, params=payload)
