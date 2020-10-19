@@ -7,7 +7,6 @@ steps:
       - -c
       - |
         zip -r morning_ai_bot *
-
   - id: upload
     dir: airflow/dags
     name: gcr.io/cloud-builders/gsutil
