@@ -10,9 +10,5 @@ steps:
   - id: upload
     dir: airflow/dags
     name: gcr.io/cloud-builders/gsutil
-    entrypoint: bash
-    args:
-      - -c
-      - |
-        ls
+    args: ['gsutil', 'cp', 'morning_ai_bot.zip', 'gs://dr666m1_airflow/morning_ai_bot.zip']
 
