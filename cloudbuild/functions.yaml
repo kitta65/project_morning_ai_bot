@@ -1,0 +1,26 @@
+steps:
+  - id: download-config
+    dir: functions
+    name: gcr.io/cloud-builders/gsutil
+    args: ['cp', 'gs://dr666m1_secrets/config.py', './config.py']
+
+  - id: deploy-function
+    dir: functions
+    name: gcr.io/cloud-builders/gcloud
+    args:
+      - functions
+      - deploy
+      - morning_ai_bot
+      - --entry-point
+      - morning_ai_bot
+      - --runtime
+      - python37
+      - --trigger-http
+      - --memory
+      - 2048MB
+      - --timeout
+      - 500s
+      - --ingress-settings
+      - internal-only
+      - --allow-unauthenticated
+

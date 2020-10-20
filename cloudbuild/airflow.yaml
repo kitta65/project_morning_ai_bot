@@ -1,0 +1,14 @@
+steps:
+  - id: download-config
+    dir: airflow/dags
+    name: gcr.io/cloud-builders/gsutil
+    args: ['cp', 'gs://dr666m1_secrets/config.py', './morning_ai_bot_package/config.py']
+
+  - id: zip-dag
+    dir: airflow/dags
+    name: gcr.io/cloud-builders/gsutil
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        zip -r morning_ai_bot *

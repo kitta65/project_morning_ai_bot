@@ -16,7 +16,7 @@ task1 = PythonOperator(
     provide_context=True,
     op_kwargs={
         "url": "https://us-central1-{}.cloudfunctions.net/morning_ai_bot".format(gcp_project),
-        "token": sandbox_token
+        "token": line_token
     },
     dag=dag,
 )
