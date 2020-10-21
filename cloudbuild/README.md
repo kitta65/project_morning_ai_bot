@@ -1,7 +1,15 @@
 # 概要
 CloudBuildの処理を設定するディレクトリ。
-CloudBuild側でこのディレクトリと連携するように設定が必要。
 
-# 注意
-CloudBuildの設定からCloudFunctions開発者（とサービスアカウントユーザー）を有効にする必要がある。
+# 準備
+## トリガーの作成
+`CloudBuild→トリガー→トリガーを作成`でairflowとfunctions用にそれぞれトリガーを作成。
+
+## 権限の設定
+`CloudBuild→設定`から以下を有効化。
+
+- CloudFunctions（CloudFunctions開発者）
+- ComputeEngine（Computeインスタンス管理者）
+- ServiceAccounts（サービスアカウントユーザー）
+    - CloudFunctionsの有効化に際して推奨されたのでたぶん必要
 
