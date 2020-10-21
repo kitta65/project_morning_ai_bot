@@ -4,17 +4,6 @@ steps:
     name: gcr.io/cloud-builders/gsutil
     args: ['cp', 'gs://dr666m1_secrets/config.py', './config.py']
 
-  - id: add-iam-policy
-    dir: functions
-    name: gcr.io/cloud-builders/gcloud
-    args:
-      - alpha
-      - functions
-      - add-iam-policy-binding
-      - morning_ai_bot
-      - --member=allUsers
-      - --role=roles/cloudfunctions.invoker
-
   - id: deploy-function
     dir: functions
     name: gcr.io/cloud-builders/gcloud

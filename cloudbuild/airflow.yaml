@@ -4,6 +4,14 @@ steps:
     name: gcr.io/cloud-builders/gsutil
     args: ['cp', 'gs://dr666m1_secrets/config.py', './morning_ai_bot_package/morning_ai_bot_config.py']
 
+  - id: set-variable
+    dir: airflow/dags
+    name: busybox
+    entrypoint: sed
+    args:
+      - "s/COMMIT_SHA/$COMMIT_SHA/g"
+      - ./morning_ai_bot_daily.py
+
   - id: zip-dag
     dir: airflow/dags
     name: gcr.io/cloud-builders/gsutil
