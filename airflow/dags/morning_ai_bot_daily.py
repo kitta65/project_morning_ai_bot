@@ -4,7 +4,7 @@ from morning_ai_bot_package.morning_ai_bot_config import *
 
 
 dag = DAG(
-    'morning_ai_bot_daily_COMMIT_SHA',
+    'morning_ai_bot_daily_BUILD_ID',
     default_args=common_args,
     description='call funtion mornin_ai_bot',
     schedule_interval="05 22 *  *  *",

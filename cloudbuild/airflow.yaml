@@ -9,7 +9,8 @@ steps:
     name: busybox
     entrypoint: sed
     args:
-      - "s/COMMIT_SHA/$COMMIT_SHA/g"
+      - -i
+      - "s/BUILD_ID/$BUILD_ID/g"
       - ./morning_ai_bot_daily.py
 
   - id: zip-dag
@@ -20,3 +21,13 @@ steps:
       - -c
       - |
         zip -r morning_ai_bot *
+
+  - id: upload-dag
+    dir: airflow/dags
+    name: gcr.io/cloud-builders/gcloud
+    args:
+      - compute
+      - scp
+      - ./morning_ai_bot.zip
+      - ${_INSTANCE}:~/airflow/dags/morning_ai_bot.zip
+      - --zone=${_ZONE}
