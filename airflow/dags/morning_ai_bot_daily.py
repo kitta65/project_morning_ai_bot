@@ -8,7 +8,7 @@ dag = DAG(
     default_args=common_args,
     description='call funtion mornin_ai_bot',
     #schedule_interval="05 22 *  *  *",
-    schedule_interval="50 14 *  *  *",
+    schedule_interval="55 14 *  *  *",
 )
 
 task1 = PythonOperator(
