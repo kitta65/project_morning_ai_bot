@@ -25,12 +25,3 @@ steps:
       - --ignore-file
       - ./.gcloudignore
 
-  - id: add-iam-role
-    name: gcr.io/cloud-builders/gcloud
-    args:
-      - functions
-      - add-iam-policy-binding
-      - morning_ai_bot
-      - --member="allUsers"
-      - --role="roles/cloudfunctions.invoker"
-

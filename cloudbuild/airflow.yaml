@@ -10,7 +10,7 @@ steps:
     entrypoint: sed
     args:
       - -i
-      - "s/BUILD_ID/$BUILD_ID/g"
+      - "s/SHORT_SHA/$SHORT_SHA/g"
       - ./morning_ai_bot_daily.py
 
   - id: zip-dag

@@ -4,11 +4,11 @@ from morning_ai_bot_package.morning_ai_bot_config import *
 
 
 dag = DAG(
-    'morning_ai_bot_daily_BUILD_ID',
+    'morning_ai_bot_daily_SHORT_SHA',
     default_args=common_args,
     description='call funtion mornin_ai_bot',
     #schedule_interval="05 22 *  *  *",
-    schedule_interval="50 13 *  *  *",
+    schedule_interval="42 14 *  *  *",
 )
 
 task1 = PythonOperator(
