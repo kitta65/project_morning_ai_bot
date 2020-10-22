@@ -30,6 +30,7 @@ steps:
     args:
       - functions
       - add-iam-policy-binding
+      - morning_ai_bot
       - --member="allUsers"
       - --role="roles/cloudfunctions.invoker"
 
