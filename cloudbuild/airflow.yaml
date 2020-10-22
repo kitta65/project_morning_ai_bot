@@ -29,5 +29,5 @@ steps:
       - compute
       - scp
       - ./morning_ai_bot.zip
-      - ${_INSTANCE}:~/airflow/dags/morning_ai_bot.zip
+      - ${_USER_INSTANCE}:~/airflow/dags/morning_ai_bot.zip
       - --zone=${_ZONE}
