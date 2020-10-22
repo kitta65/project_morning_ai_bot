@@ -52,7 +52,7 @@ def search_oldest_tweet(token, name, from_jst=None):
     return tweet_url
 
 def send_message(message):
-    line_bot_api = LineBotApi(config.LINE_TOKEN)
+    line_bot_api = LineBotApi(config.MORNING_AI_TOKEN)
     line_bot_api.broadcast(TextSendMessage(text=message))
 
 def morning_ai_bot(request):
