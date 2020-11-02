@@ -43,13 +43,13 @@ def search_oldest_tweet(token, name, from_jst=None):
         for x in res_json
         if from_datetime <= datetime.datetime.strptime(x["created_at"], "%a %b %d %H:%M:%S %z %Y")
     ]
-    try:
+    if len(res_limitted) == 0:
+        raise MyException(f"couldn't find any tweets\n{res.text}")
+    else:
         tweet_id = res_limitted[-1]["id_str"]
         # results is automatically sorted in reverse chronological order
         tweet_url = f"https://twitter.com/aichan_nel/status/{tweet_id}"
-    except (IndexError, KeyError) as e:
-        raise MyException(f"couldn't find any tweets\n{res.text}")
-    return tweet_url
+        return tweet_url
 
 def send_message(message):
     line_bot_api = LineBotApi(config.MORNING_AI_TOKEN)
