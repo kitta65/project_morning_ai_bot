@@ -1,3 +1,5 @@
+⚠️移動しました（[こちら](https://github.com/dr666m1/daily-batch/tree/main/morning-ai-bot)）。
+
 # 【非公式】モーニングアイちゃんBOT
 ## 概要
 キズナアイちゃん（`@aichan_nel`）の毎朝の投稿を検索し、URLを共有するだけの非公式LINEアカウントです。
